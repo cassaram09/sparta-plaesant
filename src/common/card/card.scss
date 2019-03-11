@@ -1,0 +1,13 @@
+.card {
+	background: white;
+}
+
+.card__image {
+	display: block;
+}
+
+.card__title {
+  width: 348px;
+  word-wrap: break-word;
+  overflow: auto;
+}

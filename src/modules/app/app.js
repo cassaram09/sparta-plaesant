@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Header } from 'common/header';
 import { Hero } from 'common/hero';
+import { Gallery } from 'common/gallery';
 
 class App extends Component {
   render() {
@@ -8,18 +9,8 @@ class App extends Component {
       <div className="app">
         <Header />
         <Hero />
+        <Gallery />
 
-
-
-        <div className="app__gallery">
-
-
-        </div>
-
-        <div className="app__footer">
-
-
-        </div>
       </div>
     );
   }
