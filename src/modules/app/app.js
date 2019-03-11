@@ -1,12 +1,11 @@
 import React, { Component, Fragment } from 'react';
-import Logo from "../../assets/logo/logo.svg"
+import { Header } from 'common/header';
+
 class App extends Component {
   render() {
     return (
       <div className="app">
-        <div className="app__header">
-          <img src={Logo} alt="Logo" className="app__logo" />
-        </div>
+        <Header />
         <div className="app__carousel">
 
         </div>

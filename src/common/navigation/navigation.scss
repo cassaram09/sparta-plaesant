@@ -1,0 +1,72 @@
+.navigation {
+  flex: 1;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.navigation__button {
+  display: none;
+  position: absolute;
+  top: 37px;
+  right: 0px;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.button_container:hover {
+  opacity: .8;
+
+}
+
+.button_container.active .top {
+  -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
+  transform: translateY(11px) translateX(0) rotate(45deg);
+  background: #fff;
+}
+
+.button_container.active .middle {
+  opacity: 0;
+  background: #fff;
+}
+
+.button_container.active .bottom {
+  -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
+          transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: #fff;
+}
+
+.button_container {
+  span {
+    background: #fff;
+    border: none;
+    height: 5px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    -webkit-transition: all .35s ease;
+    transition: all .35s ease;
+    cursor: pointer;
+    display: block;
+  }
+
+  &> span:nth-of-type(2), 
+  &> span:nth-of-type(3) {
+    margin-top: 6px;
+  }
+}
+
+@-webkit-keyframes fadeInTop{
+  0% {
+    opacity: 0;
+    top: 20%;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
