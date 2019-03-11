@@ -1,15 +1,1 @@
-@import "common/logo/logo.scss";
-@import "common/header/header.scss";
-@import "common/navigation/navigation.scss";
-
-.app {
-	background: red;
-}
-
-.app__header{
-	height: 122px;
-}
-
-.container {
-	max-width: 1440px;
-}
+@import "assets/styles/styles.scss";

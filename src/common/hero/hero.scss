@@ -1,0 +1,39 @@
+.hero {
+	height: 602px;
+	background: black;
+	position: relative;
+
+	.carousel {
+		max-width: 1440px;
+    margin: 0px auto !important;
+
+		.carousel-slider {
+			height: 100%;
+		}
+
+		.slide img {
+	    height: 602px;
+	    object-fit: cover;
+		}
+	}
+}
+
+.hero__text{
+	position: absolute;
+  z-index: 10;
+  left: 139px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  h1 {
+  	color: white;
+  }
+
+  h3 {
+  	color: white;
+  }
+
+  p {
+  	color: white;
+  }
+}
