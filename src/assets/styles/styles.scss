@@ -1,9 +1,12 @@
+@import "./globals.scss";
+
 @import "../../common/logo/logo.scss";
 @import "../../common/header/header.scss";
 @import "../../common/navigation/navigation.scss";
 @import "../../common/hero/hero.scss";
 @import "../../common/gallery/gallery.scss";
 @import "../../common/card/card.scss";
+@import "../../common/footer/footer.scss";
 
 .app {
 	background: red;
