@@ -7,15 +7,4 @@
 @import "../../common/gallery/gallery.scss";
 @import "../../common/card/card.scss";
 @import "../../common/footer/footer.scss";
-
-.app {
-	background: red;
-}
-
-.app__header{
-	height: 122px;
-}
-
-.container {
-	max-width: 1440px;
-}
+@import "../../modules/app/app.scss"

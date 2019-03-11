@@ -2,52 +2,44 @@
   flex: 1;
   justify-content: flex-end;
   display: flex;
+  align-items: center;
+}
+
+.navigation__phone {
+  margin-right: 20px;
+}
+
+.navigation__login {
+  text-transform: uppercase;
+  margin-right: 20px;
+  text-decoration: none;
+
+  &:hover {
+    color: #000;
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
 
 .navigation__button {
-  display: none;
-  position: absolute;
-  top: 37px;
-  right: 0px;
-  height: 27px;
-  width: 35px;
+  width: 30px;
   cursor: pointer;
   z-index: 100;
   -webkit-transition: all .25s ease;
   transition: all .25s ease;
-}
+  bottom: 1px;
+  position: relative;
 
-.button_container:hover {
-  opacity: .8;
+  &:hover {
+    opacity: .8;
+    color: red;
+  }
 
-}
-
-.button_container.active .top {
-  -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
-  transform: translateY(11px) translateX(0) rotate(45deg);
-  background: #fff;
-}
-
-.button_container.active .middle {
-  opacity: 0;
-  background: #fff;
-}
-
-.button_container.active .bottom {
-  -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
-          transform: translateY(-11px) translateX(0) rotate(-45deg);
-  background: #fff;
-}
-
-.button_container {
   span {
-    background: #fff;
-    border: none;
-    height: 5px;
+    background: #333;
+    height: 1px;
     width: 100%;
     position: relative;
-    top: 0;
-    left: 0;
     -webkit-transition: all .35s ease;
     transition: all .35s ease;
     cursor: pointer;
@@ -58,6 +50,23 @@
   &> span:nth-of-type(3) {
     margin-top: 6px;
   }
+}
+
+.navigation__button.active .-top {
+  -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
+  transform: translateY(11px) translateX(0) rotate(45deg);
+  background: #fff;
+}
+
+.navigation__button.active .-middle {
+  opacity: 0;
+  background: #fff;
+}
+
+.navigation__button.active .-bottom {
+  -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
+          transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: #fff;
 }
 
 @-webkit-keyframes fadeInTop{

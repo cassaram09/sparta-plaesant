@@ -1,9 +1,28 @@
 @font-face {
   font-family: 'ACaslonPro';
-  src: url('assets/fonts/ACaslonPro-Regular.otf'); /* IE9 Compat Modes */
+  src: url('assets/fonts/ACaslonPro-Regular.otf');
 }
 
 @font-face {
   font-family: 'Springville';
-  src: url('assets/fonts/Springville-Regular3.otf'); /* IE9 Compat Modes */
+  src: url('assets/fonts/Springville-Regular3.otf');
+}
+
+.container {
+	max-width: 1162px;
+	margin: 0px auto;
+}
+
+.container-wide {
+	max-width: 1440px;
+	margin: 0px auto;
+}
+
+a, p, span {
+	font-family: Arial, sans-serif;
+	color: #777;
+}
+
+a:hover {
+	transition: all 250ms ease-in-out;
 }
