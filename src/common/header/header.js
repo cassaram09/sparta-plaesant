@@ -17,7 +17,8 @@ class Header extends Component {
   }
 
   onScroll = () => {
-    const scroll = document.documentElement.scrollTop
+    const el = document.scrollingElement || document.documentElement
+    const scroll = el.scrollTop
 
     if (scroll >= 120 && !this.state.resized) {
       document.querySelector(".header__container").classList.toggle("small")
