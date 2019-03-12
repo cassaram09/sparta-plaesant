@@ -27,26 +27,26 @@
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
+}
+
+.hero__text__inner{
+  padding: 0px 20px;
+
+  h1, h3, p {
+    color: $white;
+    font-family: 'Springville', serif;
+  }
 
   h1 {
-  	color: white;
-  	font-size: 52px;
-  	font-family: 'Springville', serif;
-    padding-left: 20px;
+    font-size: 52px;
   }
 
   h3 {
-  	color: white;
-  	font-size: 26px;
-  	font-family: 'Springville', serif;
-  	margin: 25px 0px;
-    padding-left: 20px;
+    font-size: 26px;
+    margin: 25px 0px;
   }
 
   p {
-  	color: white;
-  	font-size: 18px;
-  	font-family: 'Springville', serif;
-    padding-left: 20px;
+    font-size: 18px;
   }
 }

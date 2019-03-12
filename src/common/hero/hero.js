@@ -7,9 +7,11 @@ class Hero extends Component {
     return (
       <div className="hero">
       	<div className="hero__text container">
-      		<h1>Screening: <br/>DVF Secret Agent Part 2</h1>
-      		<h3>October 15, 2017</h3>
-      		<p>Join us for a private screening of DVF Secret Agent Part 2<br/>with our special guest, director Peter Lindberg.</p>
+          <div className="hero__text__inner">
+        		<h1>Screening: <br/>DVF Secret Agent Part 2</h1>
+        		<h3>October 15, 2017</h3>
+        		<p>Join us for a private screening of DVF Secret Agent Part 2<br/>with our special guest, director Peter Lindberg.</p>
+          </div>
       	</div>
        	<Carousel
        		showArrows={false}
