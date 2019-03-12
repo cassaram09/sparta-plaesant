@@ -1,13 +1,22 @@
 .card {
 	background: white;
+	margin-bottom: 50px;
 }
 
 .card__image {
 	display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
 .card__title {
-  width: 348px;
   word-wrap: break-word;
   overflow: auto;
+}
+
+.card__content-container {
+	padding: 40px 0px 50px 1px;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 }

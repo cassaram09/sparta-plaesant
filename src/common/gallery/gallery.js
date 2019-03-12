@@ -53,22 +53,62 @@ const cards = [
   }
 ]
 
-class Gallery extends Component {
+const breakPoints = [1162, 768, 500]
 
-  renderCards = () => cards.map(c => <Card card={c} />)
+class Gallery extends Component {
+  state = {
+    columnCount: 3
+  }
+
+  componentWillMount() {
+    window.onresize = e => {
+      const width = e.currentTarget.innerWidth
+
+      if ( width => 1000 && this.state.columnCount !== 3) {
+         this.setState({ width: width, columnCount: 3 })
+      }
+
+      if ( width < 1000 && this.state.columnCount !== 2) {
+         this.setState({ width: width, columnCount: 2 })
+      }
+
+      if ( width <= 320 && this.state.columnCount !== 1) {
+         this.setState({ width: width, columnCount: 1 })
+      }
+    }
+  }
+
+  componentWillUnmount() {
+    window.onresize = undefined;
+  }
+
+  createColumns = () => {
+    const columns = []
+
+    for ( let i = 0; i < cards.length / this.state.columnCount; i++) {
+      columns.push(cards.slice(i * this.state.columnCount, (i * this.state.columnCount) + this.state.columnCount))
+    }
+
+    return columns[0].map((col, i) => columns.map(row => row[i]));
+  }
+
+  renderColumns = () => {
+    return this.createColumns().map((c,i) => {
+      return(
+        <Fragment>
+        <div className={`gallery__column__${this.state.columnCount}`}>{this.renderColumn(c)}</div>
+        {i + 1 !== this.state.columnCount && <div className="gallery__column__gutter"></div> }
+        </Fragment>
+      )
+    })
+  }
+
+  renderColumn = col => col.map(c => c && <Card card={c} />)
 
   render() {
     return (
-      <div className="gallery">
-        <Masonry
-          className={'gallery__masonry'} // default ''
-          elementType={'ul'} // default 'div'
-          options={masonryOptions} // default {}
-          disableImagesLoaded={false} // default false
-          updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
-        >
-          {this.renderCards()}
-        </Masonry>
+      <div className="gallery" >
+        {this.renderColumns()}
       </div>
     );
   }

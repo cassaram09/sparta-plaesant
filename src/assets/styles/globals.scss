@@ -26,3 +26,9 @@ a, p, span {
 a:hover {
 	transition: all 250ms ease-in-out;
 }
+
+$large-breakpoint: 1162px;
+
+$medium-breakpoint: 768px;
+
+$small-breakpoint: 500px;

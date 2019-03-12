@@ -1,0 +1,28 @@
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 100px 20px;
+	margin: 0px auto;
+	max-width: 1162px;
+	justify-content: center;
+}
+
+.gallery__masonry {
+
+}
+
+.gallery__column__1 {
+	flex: 1;
+}
+
+.gallery__column__2 {
+	flex: 1;
+}
+
+.gallery__column__3 {
+	flex: 1;
+}
+
+.gallery__column__gutter {
+	flex: 0 5%;
+}

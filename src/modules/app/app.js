@@ -10,7 +10,17 @@ class App extends Component {
       <div className="app">
         <Header />
         <Hero />
-        <Gallery />
+        <Gallery>
+        	 {
+    [...Array(12).keys()].map(key => {
+      const height = 200 + Math.ceil(Math.random() * 300);
+  
+      return (
+        <div style={{height: `${height}px`}} />
+       )
+     })
+  }
+        </Gallery>
         <Footer />
       </div>
     );
