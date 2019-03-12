@@ -19,37 +19,37 @@ const cards = [
     image: Card_2_10_17,
     date: 'FEBRUARY 10 2017',
     title: "Bureaux exquisite delightful carefully curated soft power.",
-    note: 'Presented by Lorem Ipsum'
+    author: 'Lorem Ipsum'
   },
   {
     image: Card_2_2_17,
     date: 'FEBRUARY 2 2017',
     title: "Sharo bureaux sleepy K-pop carefully curated.",
-    note: 'Presented by Lorem Ipsum'
+    author: 'Lorem Ipsum'
   },
   {
     image: Card_1_27_17,
     date: 'Jannuary 27 2017',
     title: "St Moritz uniforms Beams.",
-    note: 'Presented by Lorem Ipsum'
+    author: 'Lorem Ipsum'
   },
   {
     image: Card_1_21_17,
     date: 'JANUARY 21 2017',
     title: "Esse airport veniam ryokan soft power.",
-    note: 'Presented by Lorem Ipsum'
+    author: 'Lorem Ipsum'
   },
   {
     image: Card_1_18_17,
     date: 'JANUARY 18 2017',
     title: "K-pop extraordinary.",
-    note: 'Presented by Lorem Ipsum'
+    author: 'Lorem Ipsum'
   },
   {
     image: Card_1_12_17,
     date: 'JANUARY 12 2017',
     title: "Artisanal iconic cutting-edge business class.",
-    note: 'Presented by Lorem Ipsum'
+    author: 'Lorem Ipsum'
   }
 ]
 
@@ -72,7 +72,7 @@ class Gallery extends Component {
          this.setState({ width: width, columnCount: 2 })
       }
 
-      if ( width <= 320 && this.state.columnCount !== 1) {
+      if ( width <= 580 && this.state.columnCount !== 1) {
          this.setState({ width: width, columnCount: 1 })
       }
     }

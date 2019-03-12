@@ -10,8 +10,44 @@
 }
 
 .card__title {
-  word-wrap: break-word;
-  overflow: auto;
+  margin-bottom: 30px;
+
+  a{
+  	color: #333;
+	  word-wrap: break-word;
+	  overflow: auto;
+	  font-size: 48px;
+  	font-family: 'Springville', serif;
+  	text-decoration: none;
+
+  	&:hover {
+  		text-decoration: underline;
+  	}
+  }
+}
+
+.card__note {
+	font-family: 'ACaslonPro', serif;
+	font-size: 14px;
+	color: #333;
+ 
+	a {
+		font-size: 14px;
+		text-transform: uppercase;
+		font-family: 'ACaslonPro', serif;
+		color: #333;
+
+		&:hover{
+			color: #ccc;
+		}
+	}
+}
+
+.card__date {
+	font-size: 11px;
+	margin-bottom: 30px;
+	display: block;
+	text-transform: uppercase;
 }
 
 .card__content-container {
