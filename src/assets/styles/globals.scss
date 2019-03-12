@@ -1,3 +1,4 @@
+// Fonts
 @font-face {
   font-family: 'ACaslonPro';
   src: url('assets/fonts/ACaslonPro-Regular.otf');
@@ -8,6 +9,30 @@
   src: url('assets/fonts/Springville-Regular3.otf');
 }
 
+// Media query break points
+$large-breakpoint: 1162px;
+
+$medium-breakpoint: 768px;
+
+$small-breakpoint: 500px;
+
+// Colors
+$grey: #767676;
+$black: #131313;
+$white: #fff;
+
+// Text Defaults
+a, p, span {
+	font-family: Arial, sans-serif;
+	color: $grey;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Springville', serif;
+	color: $black;
+}
+
+// Utilities 
 .container {
 	max-width: 1162px;
 	margin: 0px auto;
@@ -18,21 +43,10 @@
 	margin: 0px auto;
 }
 
-a, p, span {
-	font-family: Arial, sans-serif;
-	color: #777;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Springville', serif;
-}
-
+// Other Defaults
 a:hover {
 	transition: all 250ms ease-in-out;
 }
 
-$large-breakpoint: 1162px;
 
-$medium-breakpoint: 768px;
 
-$small-breakpoint: 500px;
