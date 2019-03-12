@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
 class Navigation extends Component {
-
   onNavClick = () => {
     const element = document.querySelector(".navigation__button")
     element.classList.toggle('active');

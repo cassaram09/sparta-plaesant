@@ -1,11 +1,47 @@
 .header {
 	background: white;
 	padding: 0px 20px;
+	position: relative;
 }
 
-
 .header__container {
+	background: $white;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	width: 100%;
+	z-index: 2020;
+	height: 120px;
+	width: 100%;
+	transition: all 250ms ease-in-out;
+
+	&.small {
+		height: 75px;
+	}
+}
+
+.header__container__inner {
 	display: flex;
 	align-items: center;
+	height: 100%;
+	background: $white;
+	padding: 0px 20px;
+}
+
+.header__blocker {
 	height: 120px;
+}
+@media only screen and (max-width: $small-breakpoint) {
+	.header__container {
+		height: 50px !important;
+
+		&.small {
+			height: 50px;
+		}
+	}
+
+	.header__blocker{
+		height: 50px;
+	}
 }
