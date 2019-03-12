@@ -61,23 +61,28 @@ class Gallery extends Component {
   }
 
   componentWillMount() {
-    window.onresize = e => {
-      const width = e.currentTarget.innerWidth
+    window.onresize = this.getColumnCount;
 
-      if ( width => 1000 && this.state.columnCount !== 3) {
-         this.setState({ width: width, columnCount: 3 })
-      }
-
-      if ( width < 1000 && this.state.columnCount !== 2) {
-         this.setState({ width: width, columnCount: 2 })
-      }
-
-      if ( width <= 580 && this.state.columnCount !== 1) {
-         this.setState({ width: width, columnCount: 1 })
-      }
-    }
+    this.calculateColumns(window.innerWidth)
   }
 
+  getColumnCount = e => {
+    this.calculateColumns(e.currentTarget.innerWidth)
+  }
+
+  calculateColumns = width => {
+    if ( width => 1000 && this.state.columnCount !== 3) {
+      this.setState({ width: width, columnCount: 3 })
+    }
+
+    if ( width < 1000 && this.state.columnCount !== 2) {
+      this.setState({ width: width, columnCount: 2 })
+    }
+
+    if ( width <= 580 && this.state.columnCount !== 1) {
+      this.setState({ width: width, columnCount: 1 })
+    }
+  }
   componentWillUnmount() {
     window.onresize = undefined;
   }
