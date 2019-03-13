@@ -50,3 +50,30 @@
     font-size: 18px;
   }
 }
+
+@media only screen and (max-width: $medium-breakpoint) {
+  .hero{
+    height: auto;
+
+    .carousel {
+      .slide img {
+        height: 100%;
+      }
+    }
+  }
+
+  .hero__text__inner{
+    h1 {
+      font-size: 7vw;
+    }
+
+    h3 {
+      font-size: 4.5vw;
+      margin: 20px 0px;
+    }
+
+    p {
+      font-size: 3.5vw;
+    }
+  }
+}
