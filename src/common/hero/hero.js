@@ -39,6 +39,7 @@ class Hero extends Component {
       return (
         <div className="hero__slide">
           <img src={s.image} alt={s.alt} />
+          <div className="hero__slide__overlay"></div>
           <div className="hero__text container">
             <div className="hero__text__inner">
               <h1>{s.type}</h1>

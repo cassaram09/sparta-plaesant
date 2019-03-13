@@ -7,9 +7,16 @@
 		max-width: 1440px;
     margin: 0px auto !important;
 
-		.carousel-slider {
+		&.carousel-slider {
 			height: 100%;
+      padding-bottom: 38px;
 		}
+
+    .control-dots .dot{
+      background: #ccc;
+      box-shadow: none;
+      opacity: 0.5;
+    }
 
 		.slide img {
 	    height: 580px;
@@ -56,6 +63,16 @@
   p {
     font-size: 18px;
   }
+}
+
+.hero__slide__overlay{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: $black;
+  opacity: 0.41;
 }
 
 @media only screen and (max-width: 1000px) {
