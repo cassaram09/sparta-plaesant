@@ -2,6 +2,9 @@
   "name": "sparta-plaesant",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "10.15.1"
+  },
   "dependencies": {
     "masonry-layout": "^4.2.2",
     "node-sass": "^4.11.0",
