@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 class Navigation extends Component {
   onNavClick = () => {
@@ -31,5 +32,9 @@ class Navigation extends Component {
     );
   }
 }
+
+Navigation.propTypes = {}
+
+Navigation.defaultProps = {}
 
 export default Navigation;

@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 import logo from "assets/logo/logo.png"
 
@@ -9,5 +10,9 @@ const Logo = () => {
     </div>
   );
 }
+
+Logo.propTypes = {}
+
+Logo.defaultProps = {}
 
 export default Logo;

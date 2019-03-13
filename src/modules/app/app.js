@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 import { Header } from 'common/header';
 import { Hero } from 'common/hero';
@@ -17,5 +18,9 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {}
+
+App.defaultProps = {}
 
 export default App;

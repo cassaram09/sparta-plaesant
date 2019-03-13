@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 const Footer = () => (
   <div className="footer">
@@ -8,5 +9,9 @@ const Footer = () => (
 		<a className="footer__social-link -twitter" href="#">Twitter</a>
   </div>
 );
+
+Footer.propTypes = {}
+
+Footer.defaultProps = {}
 
 export default Footer;

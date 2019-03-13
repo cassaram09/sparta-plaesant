@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
+
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
@@ -8,6 +10,7 @@ import Hero3 from 'assets/images/hero_3.png'
 
 const SLIDE_INFO = [
   {
+    id: 1,
     type: "Screening:",
     title: "DVF Secret Agent Part 2",
     date: "October 15, 2017",
@@ -16,6 +19,7 @@ const SLIDE_INFO = [
     alt: "Runway"
   },
   {
+    id: 2,
     type: "Screening:",
     title: "DVF Secret Agent Part 3",
     date: "October 16, 2017",
@@ -24,6 +28,7 @@ const SLIDE_INFO = [
     alt: "Feet outside building"
   },
   {
+    id: 3,
     type: "Screening:",
     title: "DVF Secret Agent Part 4",
     date: "October 17, 2017",
@@ -36,7 +41,7 @@ const SLIDE_INFO = [
 class Hero extends Component {
   renderSlides = () => {
     return SLIDE_INFO.map(s => (
-      <div className="hero__slide">
+      <div className="hero__slide" key={s.id} >
         <img src={s.image} alt={s.alt} />
         <div className="hero__slide__overlay"></div>
         <div className="hero__text container">
@@ -70,5 +75,9 @@ class Hero extends Component {
     );
   }
 }
+
+Hero.propTypes = {}
+
+Hero.defaultProps = {}
 
 export default Hero;

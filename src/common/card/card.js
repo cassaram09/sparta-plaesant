@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 const Card = ({ card }) => {
 	const { image, date, title, author } = card;
@@ -22,6 +23,14 @@ const Card = ({ card }) => {
     	</div>
     </div>
   )
+}
+
+Card.propTypes = {
+  card: PropTypes.object
+}
+
+Card.defaultProps = {
+  card: {}
 }
 
 export default Card;
