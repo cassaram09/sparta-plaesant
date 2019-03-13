@@ -2,6 +2,10 @@ import React, { Component, Fragment } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
+import Hero1 from 'assets/images/hero_1.png'
+import Hero2 from 'assets/images/hero_2.png'
+import Hero3 from 'assets/images/hero_3.png'
+
 class Hero extends Component {
   render() {
     return (
@@ -23,9 +27,9 @@ class Hero extends Component {
           transitionTime={500}
           stopOnHover={false}
        	>
-          <img src="https://cnet4.cbsistatic.com/img/DtSrStRVmFiah7YNTrJV3_dOBH4=/970x0/2018/11/21/a502f3f1-2a07-4f3c-966a-3ad7b3d6134e/rivian-r1t-11.jpg" />
-          <img src="https://i.kinja-img.com/gawker-media/image/upload/s--xBUTOaFk--/c_scale,f_auto,fl_progressive,q_80,w_800/sptinjuhtlhfwadlp1oy.jpg" />
-          <img src="https://i.ytimg.com/vi/OGB3wufxrj8/maxresdefault.jpg" />
+          <img src={Hero1} alt={"Runway photo"} />
+          <img src={Hero2} alt={"Feet outside building"} />
+          <img src={Hero3} alt={"Girls taking selfie"} />
 	    	</Carousel>
       </div>
     );

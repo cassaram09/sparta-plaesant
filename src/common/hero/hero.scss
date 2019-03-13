@@ -1,5 +1,5 @@
 .hero {
-	height: 602px;
+	height: 580px;
 	background: #fcfcfc;
 	position: relative;
 
@@ -12,7 +12,7 @@
 		}
 
 		.slide img {
-	    height: 602px;
+	    height: 580px;
 	    object-fit: cover;
 		}
 	}
@@ -30,7 +30,7 @@
 
 .hero__text__inner{
   padding: 0px 20px;
-
+  pointer-events: none;
   h1, h3, p {
     color: $white;
     font-family: 'Springville', serif;
@@ -50,13 +50,17 @@
   }
 }
 
-@media only screen and (max-width: $medium-breakpoint) {
+@media only screen and (max-width: 1000px) {
   .hero{
-    height: auto;
+    height: 75vw;
+    min-height: 300px;
+    max-height: 580px;
 
     .carousel {
       .slide img {
-        height: 100%;
+        height: 75vw;
+        min-height: 300px;
+        max-height: 580px;
       }
     }
   }
