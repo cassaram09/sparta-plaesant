@@ -79,7 +79,7 @@ class Gallery extends Component {
       this.setState({ width: width, columnCount: 2 })
     }
 
-    if ( width <= 580 && this.state.columnCount !== 1) {
+    if ( width <= 320&& this.state.columnCount !== 1) {
       this.setState({ width: width, columnCount: 1 })
     }
   }
