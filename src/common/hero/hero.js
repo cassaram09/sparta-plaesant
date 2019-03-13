@@ -35,22 +35,20 @@ const SLIDE_INFO = [
 
 class Hero extends Component {
   renderSlides = () => {
-    return SLIDE_INFO.map(s => {
-      return (
-        <div className="hero__slide">
-          <img src={s.image} alt={s.alt} />
-          <div className="hero__slide__overlay"></div>
-          <div className="hero__text container">
-            <div className="hero__text__inner">
-              <h1>{s.type}</h1>
-              <h1>{s.title}</h1>
-              <h3>{s.date}</h3>
-              <p>{s.subtitle}</p>
-            </div>
+    return SLIDE_INFO.map(s => (
+      <div className="hero__slide">
+        <img src={s.image} alt={s.alt} />
+        <div className="hero__slide__overlay"></div>
+        <div className="hero__text container">
+          <div className="hero__text__inner">
+            <h1>{s.type}</h1>
+            <h1>{s.title}</h1>
+            <h3>{s.date}</h3>
+            <p>{s.subtitle}</p>
           </div>
         </div>
-      )
-    })
+      </div>
+    ))
   }
 
   render() {

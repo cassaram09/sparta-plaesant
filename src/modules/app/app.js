@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+
 import { Header } from 'common/header';
 import { Hero } from 'common/hero';
 import { Gallery } from 'common/gallery';
@@ -10,17 +11,7 @@ class App extends Component {
       <div className="app">
         <Header />
         <Hero />
-        <Gallery>
-        	 {
-    [...Array(12).keys()].map(key => {
-      const height = 200 + Math.ceil(Math.random() * 300);
-  
-      return (
-        <div style={{height: `${height}px`}} />
-       )
-     })
-  }
-        </Gallery>
+        <Gallery />
         <Footer />
       </div>
     );

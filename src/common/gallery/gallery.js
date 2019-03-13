@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import Masonry from 'react-masonry-component';
 
 import { Card } from 'common/card';
 
@@ -9,10 +8,6 @@ import Card_1_27_17 from 'assets/images/card_1_27_17.png';
 import Card_1_21_17 from 'assets/images/card_1_21_17.png';
 import Card_1_18_17 from 'assets/images/card_1_18_17.png';
 import Card_1_12_17 from 'assets/images/card_1_12_17.png';
-
-const masonryOptions = {
-  transitionDuration: 250
-};
 
 const cards = [
   {
@@ -53,8 +48,6 @@ const cards = [
   }
 ]
 
-const breakPoints = [1162, 768, 500]
-
 class Gallery extends Component {
   state = {
     columnCount: 3
@@ -89,9 +82,10 @@ class Gallery extends Component {
 
   createColumns = () => {
     const columns = []
+    const columnCount = this.state.columnCount;
 
-    for ( let i = 0; i < cards.length / this.state.columnCount; i++) {
-      columns.push(cards.slice(i * this.state.columnCount, (i * this.state.columnCount) + this.state.columnCount))
+    for ( let i = 0; i < cards.length / columnCount; i++) {
+      columns.push(cards.slice(i * columnCount, (i * columnCount) + columnCount))
     }
 
     return columns[0].map((col, i) => columns.map(row => row[i]));
@@ -101,8 +95,8 @@ class Gallery extends Component {
     return this.createColumns().map((c,i) => {
       return(
         <Fragment>
-        <div className={`gallery__column__${this.state.columnCount}`}>{this.renderColumn(c)}</div>
-        {i + 1 !== this.state.columnCount && <div className="gallery__column__gutter"></div> }
+          <div className={`gallery__column__${this.state.columnCount}`}>{this.renderColumn(c)}</div>
+          {i + 1 !== this.state.columnCount && <div className="gallery__column__gutter"></div> }
         </Fragment>
       )
     })
